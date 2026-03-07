@@ -12,7 +12,7 @@ return {
       },
       formatters = {
         ["clang-format"] = {
-          args = { "--style={BasedOnStyle: llvm, IndentWidth: 4}" },
+          prepend_args = { "--style={BasedOnStyle: LLVM, IndentWidth: 4}" },
         },
       },
     },
