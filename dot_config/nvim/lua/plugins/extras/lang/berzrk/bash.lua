@@ -11,7 +11,7 @@ return {
     "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
-        "bashls",
+        "bash-language-server",
         "shellcheck",
         "shfmt",
       },
