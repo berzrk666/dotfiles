@@ -1,58 +1,43 @@
+@import "theme.css";
+
 * {
-    border: none;
-    border-radius: 0px;
-    /*font-family: VictorMono, Iosevka Nerd Font, Noto Sans CJK;*/
-    font-family: Maple Mono NF;
-    font-size: 14px;
-    font-style: normal;
-    min-height: 0;
-    padding: 0;
-    margin: 0;
-    color: #ffffff;
+	all: initial; /* Reset GTK theme */
+	color: @main-fg;
 }
 
-window#waybar {
-    background: rgba(0, 0, 0, 1);
+@import "styles/fonts.css";
+@import "styles/modules-center.css";
+@import "styles/modules-left.css";
+@import "styles/modules-right.css";
+@import "styles/states.css";
+
+.module {
+	margin-bottom: -1px;
 }
 
-.modules-left {
+#waybar {
+	background-color: @outline;
+}
+#waybar > box {
+	margin: 4px;
+	background-color: @main-bg;
 }
 
-/* Left Modules */
-#custom-separator {
-    margin-left: 10px;
-    margin-right: 10px;
+button {
+	border-radius: 16px;
+	min-width: 16px;
+	padding: 0 10px;
+}
+button:hover {
+	background-color: @hover-bg;
+	color: @hover-fg;
 }
 
-/* Center Modules */
-#workspaces {
+tooltip {
+	border: 2px solid @main-br;
+	border-radius: 10px;
+	background-color: @main-bg;
 }
-
-#workspaces button {
-    padding: 0px 13px 0px 13px;
-}
-
-#workspaces button.active {
-    background-color: #434240;
-}
-
-#workspaces button:hover {
-    background-color: #5c5b59;
-}
-
-/* Right Modules */
-#tray {
-}
-
-#tray menu {
-    background: rgba(0, 0, 0, 1);
-}
-
-#tray > .needs-attention {
-    border: 2px solid #f04204;
-}
-
-#custom-notification {
-    margin-right: 10px;
-    margin-left: 10px;
+tooltip > box {
+	padding: 0 6px;
 }
